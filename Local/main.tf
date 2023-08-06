@@ -2,6 +2,7 @@ terraform {
 	  backend "s3" {
     bucket = "fg-bucket-01"
     key    = "dyuti/unt/terraform.tfstate"
+    region = "us-east-1"
   }
 }
 
