@@ -10,6 +10,6 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "fd_bucket" {
-  bucket = "fd-007-bucket"  # Replace with your desired bucket name
+  bucket = "fd-008-bucket"  # Replace with your desired bucket name
   acl    = "private"
   }
