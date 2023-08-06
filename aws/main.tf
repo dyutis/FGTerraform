@@ -11,9 +11,13 @@ provider "aws" {
 
 resource "aws_s3_bucket" "fd_bucket" {
   bucket = var.name  # Replace with your desired bucket name
-  acl    = "private"
+  acl    = var.acl
   }
 
 variable "name" {
   description = "The bucket name"
+}
+
+variable "acl" {
+  description = "if private then blocks all public access"
 }
