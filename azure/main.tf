@@ -1,7 +1,9 @@
 terraform {
-	  backend "s3" {
-    bucket = "fg-bucket-02"
-    key    = "dyuti/awstest/terraform.tfstate"
+	  backend "azurerm" {
+    resource_group_name  = "indrayan-resources"
+    storage_account_name = "terraform77demo"
+    container_name       = "azure"
+    key    = "test/terraform.tfstate"
   }
 }
 
