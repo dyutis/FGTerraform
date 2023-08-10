@@ -7,19 +7,16 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = "${{TF_AWS_REGION}}"
+provider "azurerm" {
 }
-
-resource "aws_s3_bucket" "fd_bucket" {
-  bucket = var.name  # Replace with your desired bucket name
-  acl    = var.acl
-  }
+  
+resource "azurerm_resource_group" "fd_storageaccount" {
+  name     = var.name
+  location = "West Europe"
+}
 
 variable "name" {
   description = "The bucket name"
 }
 
-variable "acl" {
-  description = "if private then blocks all public access"
-}
+
