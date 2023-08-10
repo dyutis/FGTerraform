@@ -11,13 +11,13 @@ provider "azurerm" {
     features {}
 }
   
-resource "azurerm_resource_group" "fd_storageaccount" {
+resource "azurerm_resource_group" "fd_rg" {
   name     = var.name
   location = "West Europe"
 }
 
 variable "name" {
-  description = "The bucket name"
+  description = "The resource group name"
 }
 
 
