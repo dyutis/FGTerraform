@@ -1,8 +1,7 @@
 terraform {
 	  backend "s3" {
-    bucket = "fg-bucket-01"
+    bucket = "fg-bucket-02"
     key    = "dyuti/awstest/terraform.tfstate"
-    region = "${{TF_AWS_REGION}}"
   }
 }
 
