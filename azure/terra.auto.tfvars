@@ -1,1 +1,1 @@
-name="fd009storageaccount"
+name="${{TF_AWS_PROPS}}"
