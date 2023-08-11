@@ -10,14 +10,16 @@ terraform {
 provider "azurerm" {
     features {}
 }
-  
-resource "azurerm_resource_group" "fd_rg" {
-  name     = var.name
-  location = "West Europe"
+
+resource "azurerm_storage_account" "fd_sa" {
+  name                     = var.name
+  resource_group_name      = "indrayan-resources"
+  location                 = "centralus"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+
 }
 
 variable "name" {
   description = "The resource group name"
 }
-
-
