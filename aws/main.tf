@@ -1,7 +1,7 @@
 terraform {
 	  backend "s3" {
     bucket = "fg-bucket-02"
-    key    = "dyuti/awstest/terraform.tfstate"
+    key    = "dyuti/awsunt/terraform.tfstate"
   }
 }
 
