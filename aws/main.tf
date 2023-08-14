@@ -5,9 +5,7 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = "${{TF_AWS_REGION}}"
-}
+provider "aws" {}
 
 resource "aws_s3_bucket" "fd_bucket" {
   bucket = var.name  # Replace with your desired bucket name
