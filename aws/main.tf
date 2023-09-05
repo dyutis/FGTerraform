@@ -1,23 +1,22 @@
 terraform {
 	  backend "s3" {
-    bucket = "fg-bucket-02"
-    key    = "dyuti/awsunt/terraform.tfstate"
+    bucket = "fg-bucket-03"
+    key    = "dyuti/awstest/terraform.tfstate"
   }
 }
 
 provider "aws" {
-region = "ap-south-1"
+region = "ap-west-1"
 }
 
 resource "aws_s3_bucket" "fd_bucket" {
-  bucket = var.name  # Replace with your desired bucket name
-  acl    = var.acl
+  bucket = "fd-018-bucket"  # Replace with your desired bucket name
+  acl    = "private"
   }
 
-variable "name" {
-  description = "The bucket name"
+output "s3_bucket_id" {
+  description = "The name of the bucket."
+  value       = values(aws_s3_bucket.s3_bucket_id)
 }
 
-variable "acl" {
-  description = "if private then blocks all public access"
-}
+
