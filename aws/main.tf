@@ -6,7 +6,7 @@ terraform {
 }
 
 provider "aws" {
-region = "ap-west-1"
+region = "us-west-1"
 }
 
 resource "aws_s3_bucket" "fd_bucket" {
