@@ -16,7 +16,7 @@ resource "aws_s3_bucket" "fd_bucket" {
 
 output "s3_bucket_id" {
   description = "The name of the bucket."
-  value       = aws_s3_bucket.fd_bucket[0].region
+  value       = aws_s3_bucket.fd_bucket.id
 }
 
 
